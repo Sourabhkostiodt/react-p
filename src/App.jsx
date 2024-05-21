@@ -12,6 +12,7 @@ import Signup from './pages/signup'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Form from './component/form'  
 import Dashboard from './pages/dashboard';
+import Logout from './pages/Logout';
 
 import Forgot from './pages/forgot';
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot" element={<Forgot />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </BrowserRouter>
        
