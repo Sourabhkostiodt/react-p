@@ -4,6 +4,7 @@ import React from 'react'
  // eslint-disable-next-line no-unused-vars
  import Header from './header'
 import myImage from '/src/Logo (1).png'
+import Sidebar from '../component/sidebar'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -79,7 +80,7 @@ const navigation = [
   { name: 'Garnishment', href: '#', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
+  { name: 'Your Profile', href: '/profile' },
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '#' },
 ]
@@ -94,18 +95,19 @@ function dashboard() {
     <>
    
       <div className="min-h-full">
+       
         <Disclosure as="nav" className="bg-gray-800">
-          {({ open }) => (
-            <>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                    <img
-          className="mx-auto h-10 logo-inner w-auto"
-          src={myImage}
-          alt="Your Company"
-        />
+                {({ open }) => (
+                  <>
+                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                      <div className="flex h-16 items-center justify-between">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0">
+                          <img
+                className="mx-auto h-10 logo-inner w-auto"
+                src={myImage}
+                alt="Your Company"
+              />
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -250,7 +252,9 @@ function dashboard() {
             <h1 className="text-3xl font-bold tracking-tight text-black-900">Dashboard</h1>
           </div>
         </header>
+        
         <div className='bg-gray-800'>
+        
         <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 ">
         
         <ul role="list" className="divide-y divide-gray-100">
